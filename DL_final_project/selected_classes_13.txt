@@ -1,0 +1,15 @@
+# Selected Diverse Classes for Training
+# Format: class_id,class_description,train_samples
+
+c154,Someone is standing up from somewhere,1156
+c097,Walking through a doorway,927
+c059,Sitting in a chair,771
+c106,Drinking from a cup/glass/bottle,625
+c008,Opening a door,446
+c015,Holding a phone/camera,427
+c113,Opening a closet/cabinet,370
+c127,Tidying something on the floor,314
+c096,Watching something/someone/themselves in a mirror,241
+c155,Someone is undressing,239
+c132,Watching television,203
+c038,Washing something with a towel,188
