@@ -38,3 +38,6 @@ env/
 # OS
 .DS_Store
 Thumbs.db 
+
+data/CharadesEgo_v1*
+yolo12x.pt

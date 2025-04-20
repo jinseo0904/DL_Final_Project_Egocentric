@@ -36,3 +36,4 @@ o034 television
 o035 towel
 o036 vacuum
 o037 window
+o061 toilet
