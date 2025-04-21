@@ -147,9 +147,7 @@ class ObjectDetectorYOLO:
         except Exception as e:
             # Catch potential errors if 'embed' is not supported by the library version
             logging.error(f"Error during YOLO prediction: {e}")
-            logging.error(
-                "This might indicate the 'embed' argument is not supported by your Ultralytics version or model."
-            )
+            logging.error("This might indicate the 'embed' argument is not supported by your Ultralytics version or model.")
             raise
 
         # --- Process Results ---
@@ -181,9 +179,7 @@ class ObjectDetectorYOLO:
             except AttributeError:
                 # Handle case where the library version doesn't have .embeddings
                 logging.error("Failed to extract features: 'Results' object has no attribute 'embeddings'.")
-                logging.error(
-                    "Ensure your Ultralytics library version supports the 'embed' argument and '.embeddings' attribute."
-                )
+                logging.error("Ensure your Ultralytics library version supports the 'embed' argument and '.embeddings' attribute.")
                 # Optionally re-raise or just return None for features
                 # raise # Uncomment to make this a fatal error
 
@@ -215,9 +211,7 @@ if __name__ == "__main__":
             logging.info(f"Processing example frame from path: {EXAMPLE_FRAME_PATH}")
 
             # Example 1: Run detection *without* requesting features
-            detection_output_no_features = detector.detect_objects(
-                frame_path=EXAMPLE_FRAME_PATH, extract_features=False
-            )
+            detection_output_no_features = detector.detect_objects(frame_path=EXAMPLE_FRAME_PATH, extract_features=False)
             print("\n--- Detection Results (No Features Requested) ---")
             num_objects = len(detection_output_no_features["boxes"])
             print(f"Detected {num_objects} objects.")
@@ -226,15 +220,11 @@ if __name__ == "__main__":
                 class_id = detection_output_no_features["classes"][i]
                 class_name = detection_output_no_features["class_names"][i]
                 confidence = detection_output_no_features["confidences"][i]
-                print(
-                    f"  Object {i + 1}: Class='{class_name}' (ID: {class_id}), Confidence={confidence:.4f}, Box={box}"
-                )
+                print(f"  Object {i + 1}: Class='{class_name}' (ID: {class_id}), Confidence={confidence:.4f}, Box={box}")
             print(f"Features: {detection_output_no_features['features']}")  # Should be None
 
             # Example 2: Run detection *requesting* features (using default layers [10, 14, 17])
-            detection_output_with_features = detector.detect_objects(
-                frame_path=EXAMPLE_FRAME_PATH, extract_features=True
-            )
+            detection_output_with_features = detector.detect_objects(frame_path=EXAMPLE_FRAME_PATH, extract_features=True)
             print("\n--- Detection Results (Default Features Requested) ---")
             print(f"Detected {len(detection_output_with_features['boxes'])} objects.")
             # Check if features were extracted (depends on library support)
@@ -243,9 +233,7 @@ if __name__ == "__main__":
                 # It might be a tensor, or a list/tuple of tensors if multiple layers are requested.
                 print("Features (Embeddings): Extracted (Structure depends on library output)")
             else:
-                print(
-                    f"Features: {detection_output_with_features['features']}"
-                )  # Likely None if not supported or error occurred
+                print(f"Features: {detection_output_with_features['features']}")  # Likely None if not supported or error occurred
 
         else:
             logging.warning(f"Example frame '{EXAMPLE_FRAME_PATH}' not found. Skipping examples.")

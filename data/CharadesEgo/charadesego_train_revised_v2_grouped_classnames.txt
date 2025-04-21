@@ -1,0 +1,19 @@
+0: Manage Clothing/Footwear
+1: Interact with Doors/Cabinets/Fridge
+2: Interact with Furniture/Surfaces
+3: Use Electronic Devices
+4: Interact with Containers
+5: Interact with Reading Material
+6: Interact with Linens
+7: Handle Food/Groceries
+8: Eat/Drink/Take Medicine
+9: Prepare Food/Cook
+10: Interact with Pictures
+11: Interact with Fixtures
+12: Cleaning / Tidying Actions
+13: Handle Kitchenware/Tableware
+14: Movement Actions
+15: Posture Change/Positioning
+16: Personal Grooming
+17: Communication/Expression
+18: General Object Manipulation

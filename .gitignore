@@ -40,4 +40,7 @@ env/
 Thumbs.db 
 
 data/CharadesEgo_v1*
+data/preprocessed_dataset/
 yolo12x.pt
+checkpoints/
+.cursorignore
