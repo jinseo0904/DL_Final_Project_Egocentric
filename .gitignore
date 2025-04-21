@@ -44,3 +44,4 @@ data/preprocessed_dataset/
 yolo12x.pt
 checkpoints/
 .cursorignore
+project/
