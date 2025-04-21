@@ -9,13 +9,13 @@ The complete pipeline for understanding high-level behavioral contexts from egoc
 - **Process**: Detects objects in each frame using your existing YOLO12 implementation
 - **Output**: Object bounding boxes, class predictions, and feature representations
 
-## 2. Action Recognition Module (Video Swin Transformer)
+## 2. Action Recognition Module (TimeSformer)
 - **Input**: Sequence of video frames (clips)
 - **Process**: Processes spatio-temporal patterns using the hierarchical window-based transformer approach
 - **Output**: Action class predictions and spatio-temporal feature representations
 
 ## 3. Object-Action Association Module
-- **Input**: Object features from YOLO12 and spatio-temporal features from Video Swin
+- **Input**: Object features from YOLO12 and spatio-temporal features from TimeSformer
 - **Process**: Uses cross-attention mechanisms to associate detected objects with recognized actions
 - **Output**: Fused object-action representations that capture their interactions
 
@@ -28,7 +28,7 @@ The complete pipeline for understanding high-level behavioral contexts from egoc
 
 1. A video clip (sequence of frames) is input to the pipeline
 2. Each frame passes through the object detector (YOLO12) to identify objects
-3. The entire clip passes through the Video Swin Transformer to recognize actions
+3. The entire clip passes through the TimeSformer to recognize actions
 4. Object features and action features are fed into the association module to create fused representations
 5. The fused representations are processed by the context transformer to produce final behavioral context predictions
 
